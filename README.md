@@ -1,4 +1,6 @@
-# experiment-3
+# آزمایش 3
+### گام 1:
+
 <table dir='rtl'>
 <tbody>
 <tr>
@@ -244,3 +246,112 @@
 
 </tbody>
 </table>
+
+مجموع تعداد تغییرات: 15
+
+### گام ۲:
+<table dir='rtl'>
+<tbody>
+<tr>
+<td rowspan="2" width="240">
+<p>اصل 1</p>
+<p>Single Responsibility</p>
+</td>
+<td width="95">
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td width="454">
+<p>کلاس Message به SRP پایبند است زیرا فقط محتوای پیام اصلی را مدیریت می کند.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>کلاس های سرویس (EmailMessageService, SmsMessageService, TelegramMessageService) با ترکیب منطق ارسال پیام با validation، SRP را نقض می کنند.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 2</p>
+<p>Open-Close Principle (OCP)</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>رابط "MessageService" با تعریف متدهایی ("sendSmsMessage"، "sendEmailMessage"، "sendTelegramMessage") بدون تغییر به OCP پایبند است.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>کلاس های پیاده سازی سرویس (`EmailMessageService`, `SmsMessageService`, `TelegramMessageService`) با تغییر رفتار در هر کلاس (افزودن منطق validation) OCP را نقض می کنند.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 3</p>
+<p>Liskov Substitution Principle</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>کلاس های «EmailMessage»، «SmsMessage» و «TelegramMessage» «Message» را گسترش می دهند و می توانند به جای یکدیگر در جایی که «Message» مورد انتظار است استفاده شوند.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>متد های اجرای سرویس (`sendSmsMessage، `sendEmailMessage`, `sendTelegramMessage`)به زیرکلاس های خاصی از "Message" ("SmsMessage"، "EmailMessage"، "TelegramMessage") وابسته اند، که می تواند منجر به coupling و انعطاف پذیری کمتر شود.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 4</p>
+<p>Interface Segregation Principle</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>رابط «MessageService» به درستی با متد های خاصی برای هر نوع پیام تفکیک شده است.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>پیاده سازی های سرویس ('EmailMessageService'، 'SmsMessageService'، 'TelegramMessageService') کل رابط 'MessageService' را اجرا می کنند، حتی اگر فقط از متد های خاصی استفاده می کنند.</p>
+</td>
+</tr>
+<tr>
+<td rowspan="2">
+<p>اصل 5</p>
+<p>Dependency Inversion Principle</p>
+</td>
+<td>
+<p><strong>موارد تحقق</strong></p>
+</td>
+<td>
+<p>رابط MessageService یک انتزاع را نشان می دهد که اجزای سطح بالاتر (کلاس "Main") به آن بستگی دارند.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>موارد نقض</strong></p>
+</td>
+<td>
+<p>کلاس «Main» مستقیماً به پیاده سازی های مشخص («EmailMessageService»، «SmsMessageService»، «TelegramMessageService») بستگی دارد، نه فقط به انتزاع («MessageService»).</p>
+</td>
+</tr>
+</tbody>
+</table>
+
