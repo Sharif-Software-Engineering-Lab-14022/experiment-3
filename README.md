@@ -1,4 +1,5 @@
 # آزمایش 3
+
 ### گام 1:
 
 <table dir='rtl'>
@@ -17,7 +18,7 @@
 <p><strong>شرحی کوتاه از تغییر</strong></p>
 </td>
 </tr>
-  
+
 <tr>
 <td width="64">
 <p><strong>1</strong></p>
@@ -250,6 +251,7 @@
 مجموع تعداد تغییرات: 15
 
 ### گام ۲:
+
 <table dir='rtl'>
 <tbody>
 <tr>
@@ -350,6 +352,68 @@
 </td>
 <td>
 <p>کلاس «Main» مستقیماً به پیاده سازی های مشخص («EmailMessageService»، «SmsMessageService»، «TelegramMessageService») بستگی دارد، نه فقط به انتزاع («MessageService»).</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+### گام ۳:
+
+<table dir='rtl'>
+<tbody>
+<tr>
+<td width="168">
+<p><strong>اصل مربوطه (از اصول </strong><strong>SOLID</strong><strong>)</strong></p>
+</td>
+<td width="246">
+<p><strong>علت نقض</strong></p>
+</td>
+<td width="284">
+<p><strong>راه حل پیشنهادی</strong></p>
+</td>
+</tr>
+<tr>
+<td width="168">
+<p></p>
+</td>
+<td width="246">
+<p>&nbsp;</p>
+</td>
+<td width="284">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="168">
+<p>&nbsp;</p>
+</td>
+<td width="246">
+<p>&nbsp;</p>
+</td>
+<td width="284">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="168">
+<p>&nbsp;</p>
+</td>
+<td width="246">
+<p>&nbsp;</p>
+</td>
+<td width="284">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="168">
+<p>&nbsp;</p>
+</td>
+<td width="246">
+<p>&nbsp;</p>
+</td>
+<td width="284">
+<p>&nbsp;</p>
 </td>
 </tr>
 </tbody>
