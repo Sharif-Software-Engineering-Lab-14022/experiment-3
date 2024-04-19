@@ -16,15 +16,4 @@ public class TelegramMessageService implements MessageService{
             throw new IllegalArgumentException("Invalid message type");
         }
     }
-
-    public boolean validateID(String ID) {
-        // Regular expression pattern for validating email addresses
-        String IDRegex = "^@[a-z0-9_-]{3,15}$";
-
-        // Compile the pattern into a regex Pattern object
-        Pattern pattern = Pattern.compile(IDRegex);
-
-        // Check if the email string matches the regex pattern
-        return pattern.matcher(ID).matches();
-    }
 }
